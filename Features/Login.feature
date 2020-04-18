@@ -2,8 +2,8 @@ Feature:  Login
 
   Scenario: Successful Login with Valid Credentials
     Given User Launch Chrome browser
-    When User opens URL "https://lachiquitravel.com/wp-admin"
-    And User enters Email as "marlonflying@gmail.com" and Password as "Flyintothesky"
+    When User opens URL "https://wpsite.com/wp-admin"
+    And User enters Email as "emailg@gmail.com" and Password as "password"
     And Click on Log In
     Then Page Title should be "Dashboard ‹ La Chiqui Travel — WordPress"
     When User click on Log Out
@@ -12,15 +12,15 @@ Feature:  Login
 
   Scenario Outline: Login with Data Driven
     Given User Launch Chrome browser
-    When User opens URL "https://lachiquitravel.com/wp-admin"
+    When User opens URL "https://wpsite.com/wp-admin"
     And User enters Email as "<email>" and Password as "<password>"
     And Click on Log In
-    Then Page Title should be "Dashboard ‹ La Chiqui Travel — WordPress"
+    Then Page Title should be "Dashboard ‹ wpsite — WordPress"
     When User click on Log Out
-    Then Page Title should be "Log In ‹ La Chiqui Travel — WordPress"
+    Then Page Title should be "Log In ‹ La wpsite — WordPress"
     And close browser
 
     Examples:
       | email | password  |
-      | marlonflying@gmail.com  | Flyintothesky |
-      | marlonflying@gmail.com  | asdfasdf  |
+      | email@gmail.com  | password |
+      | email2@gmail.com  | asdfasdf  |
