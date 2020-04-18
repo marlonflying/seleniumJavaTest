@@ -5,9 +5,9 @@ Feature:  Login
     When User opens URL "https://wpsite.com/wp-admin"
     And User enters Email as "emailg@gmail.com" and Password as "password"
     And Click on Log In
-    Then Page Title should be "Dashboard ‹ La Chiqui Travel — WordPress"
+    Then Page Title should be "Dashboard ‹ wpsite — WordPress"
     When User click on Log Out
-    Then Page Title should be "Log In ‹ La Chiqui Travel — WordPress"
+    Then Page Title should be "Log In ‹ wpsite — WordPress"
     And close browser
 
   Scenario Outline: Login with Data Driven
